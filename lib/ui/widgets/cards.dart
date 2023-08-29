@@ -42,3 +42,39 @@ class VerticalDataCard extends DataCard {
     );
   }
 }
+
+class HorizontalDataCard extends DataCard {
+  const HorizontalDataCard({
+    super.key,
+    required super.imagePath,
+    required super.title,
+    required super.description,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.only(
+        top: MediaQuery.of(context).padding.top +10,
+        right: 20,
+        left: 20,
+        bottom: 10,
+      ),
+      child: Row(
+        children: [
+          Image.asset(imagePath),
+          const SizedBox(height: 5),
+          Expanded(
+            child: Column(
+              children: [
+                Text(title),
+                const SizedBox(height: 5),
+                Text(description),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
