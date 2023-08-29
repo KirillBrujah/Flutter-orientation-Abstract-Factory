@@ -1,5 +1,4 @@
 import 'cards.dart';
-import 'package:flutter/material.dart';
 
 abstract class OrientationFactory {
   DataCard buildDataCard({
@@ -9,3 +8,16 @@ abstract class OrientationFactory {
   });
 }
 
+class VerticalOrientationFactory implements OrientationFactory {
+  @override
+  DataCard buildDataCard({
+    required String title,
+    required String description,
+    required String imagePath,
+  }) =>
+      VerticalDataCard(
+        imagePath: imagePath,
+        title: title,
+        description: description,
+      );
+}
