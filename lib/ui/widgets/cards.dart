@@ -26,7 +26,7 @@ class VerticalDataCard extends DataCard {
     return Card(
       child: Column(
         children: [
-          // TODO: Image
+          Image.asset("assets/fry.png"),
           Text(title),
           const SizedBox(height: 5),
           Text(description),
