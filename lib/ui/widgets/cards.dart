@@ -63,7 +63,7 @@ class HorizontalDataCard extends DataCard {
       child: Row(
         children: [
           Image.asset(imagePath),
-          const SizedBox(height: 5),
+          const SizedBox(width: 5),
           Expanded(
             child: Column(
               children: [
