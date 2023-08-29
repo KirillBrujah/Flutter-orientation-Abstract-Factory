@@ -6,6 +6,8 @@ abstract class OrientationFactory {
     required String description,
     required String imagePath,
   });
+
+
 }
 
 class VerticalOrientationFactory implements OrientationFactory {
