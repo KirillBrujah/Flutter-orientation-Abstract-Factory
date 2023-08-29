@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import 'cards.dart';
 
 abstract class OrientationFactory {
@@ -6,6 +8,11 @@ abstract class OrientationFactory {
     required String description,
     required String imagePath,
   });
+
+  static OrientationFactory getFactory(Orientation orientation) =>
+      orientation == Orientation.portrait
+          ? VerticalOrientationFactory()
+          : HorizontalOrientationFactory();
 }
 
 class VerticalOrientationFactory implements OrientationFactory {
